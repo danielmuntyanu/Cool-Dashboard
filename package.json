@@ -1,0 +1,16 @@
+{
+  "name": "individual-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Danyil Muntianu",
+  "type": "module",
+  "main": "./src/scripts/main.js",
+  "scripts": {
+    "start": "node src/scripts/main.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "vitest": "^4.1.8"
+  }
+}
