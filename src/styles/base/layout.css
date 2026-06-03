@@ -1,0 +1,33 @@
+/* Here we will make classes for layout */
+
+body {
+
+}
+
+section {
+    @apply min-h-screen w-full flex flex-col justify-center items-center;
+}
+
+.container {
+    @apply p-8; 
+}
+
+header {
+    @apply sticky top-0 z-50 flex flex-row justify-between items-center p-4;
+}
+
+
+footer {
+    @apply flex flex-row justify-between items-center;
+}
+
+article {
+    @apply p-4 flex flex-col justify-between items-start gap-2;
+}
+
+.letter_square {
+    @apply rounded-full w-4 h-4 text-xl;
+    /* ADD COLOR HERE */
+}
+
+

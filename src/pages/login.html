@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Cool Dashboard</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <script src="../scripts/components/theme-default.js"></script>
+</head>
+<body>
+    <header>
+        <div id="backButton">
+            <img class="header__back-button-icon" src="../assets/icons/back.svg" />
+        </div>
+
+        <div class="header__theme-switch" id="themeSwitch">
+            <img class="icon" src="../assets/icons/themeSystem.svg"
+        </div>
+
+        <div class="header__theme-menu hidden" id="themeMenu">
+            <div class="header__theme-item" id="themeItemDark">Dark mode</div>
+            <div class="header__theme-item" id="themeItemLight">Light Mode</div>
+            <div class="header__theme-item" id="themeItemSystem">System setting</div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container flex flex-col justify-center items-center">
+                <h1>Login to entry the Dashboard</h1>
+                <form class="login__form" id="loginForm">
+                    <input type="text" placeholder="Username" id="formUsername">
+                    <input type="password" placeholder="Password" id="formPassword">
+                    <div class="button_action" id="formSubmit">Login</div>
+                    <span class="hidden" id="formError"></span>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/components/theme-switch.js"></script>
+    <script src="../scripts/components/login-handler.js"></script>
+</body>
+</html>

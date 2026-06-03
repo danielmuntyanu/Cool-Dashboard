@@ -1,0 +1,19 @@
+sidebar {
+    @apply hidden fixed flex-col min-w-[50vw] max-w-[70vw] h-screen min-h-screen;
+    @apply items-center justify-start gap-4 p-4;
+    
+    /* BG COLOR HeRE */
+}
+
+.sidebar__separator {
+    @apply h-0.5 w-full;
+    /* BG COLOR HERE */
+}
+
+.sidebar__navigation {
+    @apply flex h-full w-full flex-col justify-between items-start px-4 py-8;
+}
+
+.sidebar__view_menu {
+    @apply flex flex-col justify-start items-start gap-4;
+}

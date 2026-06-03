@@ -2,8 +2,17 @@
 
 @import "tailwindcss";
 @import "./base/fonts.css";
+@import "./base/reset.css";
 @import "./theme.css";
 @import "./base/variables.css";
-@import "./base/reset.css";
 @import "./base/typography.css";
+@import "./base/layout.css";
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/filters.css";
+@import "./components/inputs.css";
+@import "./components/sidebar.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 

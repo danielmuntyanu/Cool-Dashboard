@@ -3,13 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Dashboard</title>
+    <title>Home | Cool Dashboard</title>
     <link rel="stylesheet" href="./src/styles/output.css">
- 
+    <script src="./src/scripts/components/theme-default.js"></script>
 </head>
 <body>
-    <h1 class="my_class">Hello World</h1>
+    <header>
+        <div class="header__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul class="navigation__list">
+                <li><a class="navigation__link active" href="./index.html">Dashboard</a></li>
+                <li><a class="navigation__link" href="./src/pages/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__theme-switch" id="themeSwitch">
+            <img class="icon" src="./src/assets/icons/themeSystem.svg"
+        </div>
+
+        <div class="header__theme-menu hidden" id="themeMenu">
+            <div class="header__theme-item" id="themeItemDark">Dark mode</div>
+            <div class="header__theme-item" id="themeItemLight">Light Mode</div>
+            <div class="header__theme-item" id="themeItemSystem">System setting</div>
+        </div>
+    </header>
+
+    <sidebar id="sidebar">
+        <div class="logo_container">
+            <span>
+                CoolDashboard
+                <img class="icon" src="../assets/icons/logo.svg" >
+            </span>
+        </div>
+
+        <div class="sidebar__separator"></div>
+
+        <div class="sidebar__navigation">
+            <div class="sidebar__view_menu">
+                <div class="button_outlined" id="galleryButton">
+                    Gallery View
+                </div>
+                <div class="button_outlined" id="listButton">
+                    List View
+                </div>
+            </div>
+
+            <a class="button_outlined" id="logOutButton" href="./src/pages/login.html">
+                Log Out
+            </a>
+        </div>
+    </sidebar>
+
+    <main>
+        <section>
+            <h1 class="text-left">Dashboard</h1>
+            
+            <!-- Filter -->
+            <div class="container" id="dashboardFilter">
+                
+            </div>
+
+            <!-- Gallery -->
+            <div class="container" id="dashboardGallery">
+                
+            </div>
+
+            <!-- List -->
+            <div class="container hidden" id="dashboardList">
+                
+            </div>
+
+            <!-- Empty -->
+            <div class="container hidden justify-center items-center text-center" id="dashboardEmpty">
+                <h2>No items found.</h2>
+            </div>
 
 
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="logo_container">
+            <span>
+                CoolDashboard
+                <img class="icon" src="../assets/icons/logo.svg" >
+            </span>
+        </div>
+
+        <div class="footer__socials">
+            <ul>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="./src/scripts/components/theme-switch.js"></script>
+    <script src="./src/scripts/components/render-dashboard.js"></script>
+    <script src="./src/scripts/components/items-filter.js"></script>
 </body>
 </html>
