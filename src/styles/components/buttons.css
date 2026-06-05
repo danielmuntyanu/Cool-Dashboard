@@ -18,8 +18,11 @@
 
 
 .button_action {
-    @apply p-2 rounded-lg shadow-md text-center;
-    @apply text-text-on-brand bg-brand hover:bg-brand-hover hover:text-text-on-brand hover:border-none hover:mb-0;
+    @apply 
+        p-2 rounded-lg shadow-md text-center
+        text-text-on-brand bg-brand cursor-pointer
+        hover:bg-brand-hover hover:text-text-on-brand 
+        hover:border-none hover:mb-0;
 }
 
 .button_action_secondary {

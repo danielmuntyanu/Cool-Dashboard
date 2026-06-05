@@ -1,11 +1,15 @@
 .gallery_container {
-    @apply justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    @apply 
+        justify-items-center gap-4 
+        grid-cols-1 sm:grid-cols-2 
+        lg:grid-cols-3 xl:grid-cols-4;
 }
 
 .card {
-    @apply min-h-[40vh] min-w-65 max-w-75 rounded-lg;
-    @apply bg-bg-elevated shadow-md;
-    @apply p-8 pr-4 gap-2 flex flex-col justify-around items-start;
+    @apply 
+        min-h-[40vh] sm:min-w-65 min-w-75 max-w-75 rounded-lg
+        bg-bg-elevated shadow-md
+        p-8 pr-4 gap-2 flex flex-col justify-around items-start;
 }
 
 .card article {

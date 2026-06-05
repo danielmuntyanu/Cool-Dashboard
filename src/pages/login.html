@@ -26,17 +26,17 @@
     </header>
 
     <main>
-        <section>
-            <div class="container flex flex-col justify-center items-center">
-                <h1>Login to entry the Dashboard</h1>
+        <div class="login__section">
+            <h1 class="login__title">Login to entry the Dashboard</h1>
+            <div class="container login__container">
                 <form class="login__form" id="loginForm">
                     <input type="text" placeholder="Username" id="formUsername">
                     <input type="password" placeholder="Password" id="formPassword">
-                    <div class="button_action" id="formSubmit">Login</div>
-                    <span class="hidden" id="formError"></span>
                 </form>
+                <div class="button_action w-full" id="formSubmit">Login</div>
+                <span class="hidden" id="formError"></span>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="../scripts/components/theme-switch.js"></script>
