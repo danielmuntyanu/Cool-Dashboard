@@ -5,6 +5,7 @@ const dashboardFilter = document.getElementById('dashboardFilter');
 
 const dashboardGallery = document.getElementById('dashboardGallery');
 const dashboardList = document.getElementById('dashboardList');
+const dashboardListBody = document.getElementById('dashboardListBody');
 const dashboardEmpty = document.getElementById('dashboardEmpty');
 
 const galleryButton = document.getElementById('galleryButton');
@@ -22,6 +23,7 @@ function renderGallery (itemsRaw) {
     }
 
     items.forEach((item) => {
+
         dashboardGallery.innerHTML += `
             <div class="card">
                 <div class="letter_square">
@@ -32,8 +34,26 @@ function renderGallery (itemsRaw) {
                     ${item.name}
                 </h3>
 
-                <!-- ADD ELEMENTS HERE -->
-                
+                <article>
+                    <p>
+                        <b>Email:</b><br/>
+                        ${item.email}
+                    </p>
+                    <p>
+                        <b>Address:</b> <br/>
+                        &nbsp;&nbsp;<b>Street</b>: ${item.address.street}, <br/>
+                        &nbsp;&nbsp;<b>Suite</b>: ${item.address.suite}, <br/>
+                        &nbsp;&nbsp;<b>City</b>: ${item.address.city}, <br/> 
+                        &nbsp;&nbsp;<b>Zipcode</b>: ${item.address.zipcode}
+                    
+                    </p>
+
+                </article>
+
+                <a href="mailto:${item.email}">
+                    <div class="button_action">Send Email</div>
+                </a>
+
             </div>
         `
     });
@@ -44,24 +64,26 @@ function renderList (itemsRaw) {
     if (items.length === 0) {
         dashboardEmpty.classList.replace("hidden", "flex");
         dashboardList.classList.replace("grid", "hidden");
-        return
+        return;
     } else {
         dashboardEmpty.classList.replace("flex", "hidden");
     }
 
     items.forEach((item) => {
-        dashboardList.innerHTML += `
-            <div class="list_item">
-                
-                <h3>
-                    ${item.name}
-                </h3>
-
-                <!-- ADD ELEMENTS HERE -->
-                
-            </div>
+        dashboardListBody.innerHTML += `
+            <tr class="list_item">
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td><a href="mailto:${item.email}">${item.email.split("@")[0] + " @" + item.email.split("@")[1]}</a></td>
+                <td>${item.address.zipcode},
+                ${item.address.city},<br/>
+                ${item.address.street},
+                ${item.address.suite}</td>
+            </tr>
         `
     });
+
+    console.log(dashboardListBody.innerHTML);
 }
 
 const galleryButtonListener = async () => {
@@ -69,11 +91,16 @@ const galleryButtonListener = async () => {
     if (!rawItems) {
         return;
     }
-    
 
-    dashboardList.classList.remove("grid");
+    localStorage.setItem("view", "gallery")
+    
+    galleryButton.classList.add("active");
+    listButton.classList.remove("active");
+
+
+    dashboardList.classList.remove("flex");
     dashboardList.classList.add("hidden");
-    dashboardList.innerHTML = ``
+    dashboardListBody.innerHTML = ``
 
     dashboardGallery.classList.remove("hidden");
     dashboardGallery.classList.add("grid")
@@ -89,12 +116,18 @@ const listButtonListener = async () => {
     if (!rawItems) {
         return;
     }
+
+    localStorage.setItem("view", "list")
+
+    listButton.classList.add("active");
+    galleryButton.classList.remove("active");
+
     
     dashboardGallery.classList.add("hidden");
     dashboardGallery.classList.remove("grid");
     dashboardGallery.innerHTML = ``
 
-    dashboardList.classList.add("grid");
+    dashboardList.classList.add("flex");
     dashboardList.classList.remove("hidden")
 
     renderList(rawItems);
@@ -102,5 +135,12 @@ const listButtonListener = async () => {
 
 listButton.addEventListener("click", listButtonListener);
 
+const initialView = localStorage.getItem("view");
+if (initialView === "gallery") {
+    galleryButtonListener();
+} else if (initialView === "list") {
+    listButtonListener();
+} else {
+    galleryButtonListener();
+}
 
-galleryButtonListener();

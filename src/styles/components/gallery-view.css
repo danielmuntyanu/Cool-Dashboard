@@ -1,0 +1,27 @@
+.gallery_container {
+    @apply justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+.card {
+    @apply min-h-[40vh] min-w-65 max-w-75 rounded-lg;
+    @apply bg-bg-elevated shadow-md;
+    @apply p-8 pr-4 gap-2 flex flex-col justify-around items-start;
+}
+
+.card article {
+    @apply p-2 ;
+}
+    
+
+.letter_square {
+    @apply rounded-full w-12 h-12 text-xl border flex justify-center items-center;
+    
+    @apply border-border-default bg-brand text-text-on-brand;
+}
+
+
+
+
+
+
+

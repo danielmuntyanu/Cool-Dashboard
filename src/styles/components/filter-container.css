@@ -1,5 +1,5 @@
 .filter__container {
-    @apply p-8 bg-bg-elevated flex flex-row flex-wrap;
+    @apply w-full p-8 bg-bg-elevated flex flex-row flex-wrap;
     @apply rounded-lg justify-center items-center shadow-md;
 }
 

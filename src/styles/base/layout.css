@@ -1,5 +1,3 @@
-/* Here we will make classes for layout */
-
 body {
     @apply bg-bg-page;
 }
@@ -9,7 +7,7 @@ section {
 }
 
 .container {
-    @apply p-8 bg-bg-surface rounded-lg shadow-md; 
+    @apply p-4 sm:p-8 bg-bg-surface rounded-lg shadow-md; 
 }
 
 header {
@@ -43,21 +41,11 @@ main {
 footer {
     @apply flex flex-row justify-between items-center;
     @apply bg-bg-page border-t border-border-strong shadow-md p-4 py-8;
+    @apply md:pl-[calc(20vw+1rem)];
 }
 
 .footer__socials ul {
     @apply flex flex-row gap-4;
-}
-
-
-article {
-    @apply p-4 flex flex-col justify-between items-start gap-2;
-}
-
-.letter_square {
-    @apply rounded-full w-4 h-4 text-xl border;
-    
-    @apply border-border-default bg-brand text-text-on-brand;
 }
 
 .logo_container {
@@ -65,7 +53,7 @@ article {
 }
 
 .logo_container span {
-    @apply inline-flex grow-0;
+    @apply inline-flex grow-0 text-text-primary;
 }
 
 .icon {
@@ -73,5 +61,7 @@ article {
     @apply transition-all duration-300;
 }
 
-
+article {
+    @apply p-4 flex flex-col justify-between items-start gap-2;
+}
 

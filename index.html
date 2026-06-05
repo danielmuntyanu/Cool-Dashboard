@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./src/styles/output.css">
     <script src="./src/scripts/components/theme-default.js"></script>
 </head>
+
 <body>
     <header>
         <div class="button_icon" id="headerHamburger">
@@ -34,7 +36,7 @@
         <div class="sidebar_header">
             <div class="logo_container">
                 <span>
-                    <img class="icon" src="./src/assets/icons/logo.svg" >
+                    <img class="icon" src="./src/assets/icons/logo.svg">
                     CoolDashboard
                 </span>
             </div>
@@ -64,20 +66,32 @@
     <main>
         <section>
             <h1 class="w-full text-left">Employees</h1>
-            
+
             <!-- Filter -->
             <div class="filter__container" id="dashboardFilter">
-                
+
             </div>
 
             <!-- Gallery -->
-            <div class="container" id="dashboardGallery">
-                
+            <div class="container gallery_container" id="dashboardGallery">
+
             </div>
 
             <!-- List -->
-            <div class="container hidden" id="dashboardList">
-                
+            <div class="container list_container hidden" id="dashboardList">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Adress</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dashboardListBody">
+                        
+                    </tbody>
+                </table>
             </div>
 
             <!-- Empty -->
@@ -95,7 +109,7 @@
     <footer>
         <div class="logo_container">
             <span>
-                <img class="icon" src="./src/assets/icons/logo.svg" >
+                <img class="icon" src="./src/assets/icons/logo.svg">
                 CoolDashboard
             </span>
         </div>
@@ -115,4 +129,5 @@
     <script type="module" src="./src/scripts/components/items-filter.js"></script>
     <script type="module" src="./src/scripts/components/sidebar.js"></script>
 </body>
+
 </html>
