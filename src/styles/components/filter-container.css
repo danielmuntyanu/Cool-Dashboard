@@ -1,0 +1,12 @@
+.filter__container {
+    @apply p-8 bg-bg-elevated flex flex-row flex-wrap;
+    @apply rounded-lg justify-center items-center shadow-md;
+}
+
+.filter__item {
+    @apply px-3 hover:bg-brand-hover hover:text-text-on-brand font-bold;
+}
+
+.filter__item.active {
+    @apply bg-brand text-text-on-brand;
+}

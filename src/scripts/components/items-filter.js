@@ -1,6 +1,11 @@
 function getFilter () {
     const activeFilter = localStorage.getItem("filter");
-    if (!activeFilter) return "ALL";
+    if (!activeFilter) {
+        return "ALL";
+    } else {
+        return activeFilter;
+    }
+
 }
 
 function setFilter (filterText) {
@@ -14,8 +19,6 @@ function setFilter (filterText) {
 
 export function applyFilter(itemsRaw) {
     const activeFilter = getFilter();
-    
-    [].filter()
 
     const items = itemsRaw.filter(item => {
         if (activeFilter === "ALL") {
@@ -37,18 +40,23 @@ const filterOptionsList = [
 const dashboardFilter = document.getElementById("dashboardFilter");
 
 filterOptionsList.forEach(optionText => {
-   dashboardFilter.innerHTML += `
-       <div class="filter__item" id="filter_${optionText}">${optionText}</div>
-   `;
+    dashboardFilter.innerHTML += `
+        <div class="filter__item button_icon" id="filter_${optionText}">
+            ${optionText}
+        </div>
+    `;
 });
+
+// To activate styles for current filter
+const currentFilterText = getFilter();
+const currentFilter = document.getElementById(`filter_${currentFilterText}`);
+currentFilter.classList.toggle("active");
+
 
 const filterOptions = document.querySelectorAll(".filter__item");
 filterOptions.forEach((option) => {
     option.addEventListener("click", () => {
-        option.classList.toggle("active");
-        const previousFilter = document.getElementById(`filter_${getFilter()}`);
-        previousFilter.classList.toggle("active");
-        setFilter(option.innerHTML);
+        setFilter(option.innerHTML.trim());
         location.reload();
     });
 });

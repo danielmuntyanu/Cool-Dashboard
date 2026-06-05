@@ -1,9 +1,10 @@
 /* Entry point, imports only */
 
 @import "tailwindcss";
+
 @import "./base/fonts.css";
 @import "./base/reset.css";
-@import "./theme.css";
+@import "./themes.css";
 @import "./base/variables.css";
 @import "./base/typography.css";
 @import "./base/layout.css";
@@ -12,6 +13,8 @@
 @import "./components/filters.css";
 @import "./components/inputs.css";
 @import "./components/sidebar.css";
+@import "./components/theme-menu.css";
+@import "./components/filter-container.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

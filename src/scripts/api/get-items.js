@@ -1,12 +1,12 @@
-
-
-export async function getItems() {
+async function getItems() {
     try {
         const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
         if (!response.ok) {
             throw new Error("Network response was not ok");
-        }
+        } 
+
+
 
         const items = await response.json();
 
@@ -18,5 +18,8 @@ export async function getItems() {
 
     } catch (error) {
         console.log(`ERROR: ${error.message}`);
+        return null;
     }
 }
+
+export {getItems};

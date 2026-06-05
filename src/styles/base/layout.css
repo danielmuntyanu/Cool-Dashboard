@@ -1,33 +1,77 @@
 /* Here we will make classes for layout */
 
 body {
-
+    @apply bg-bg-page;
 }
 
 section {
-    @apply min-h-screen w-full flex flex-col justify-center items-center;
+    @apply min-h-[90vh] p-4 w-full flex flex-col justify-start items-center gap-8 my-8;
 }
 
 .container {
-    @apply p-8; 
+    @apply p-8 bg-bg-surface rounded-lg shadow-md; 
 }
 
 header {
-    @apply sticky top-0 z-50 flex flex-row justify-between items-center p-4;
+    @apply sticky top-0 z-50 h-[10vh] flex  flex-row justify-between items-center p-4;
+    @apply bg-bg-page border-b border-border-strong shadow-md;
+
+    @apply md:pl-[20vw];
 }
 
+#headerHamburger {
+    @apply opacity-100 md:opacity-0;
+}
+
+
+.navigation__list {
+    @apply flex flex-row gap-2 justify-around items-center;
+
+}
+
+.navigation__link {
+    @apply hover:border-none;
+}
+.navigation__link.active {
+    @apply border-b-2 border-brand;
+}
+
+main {
+    @apply md:pl-[20vw];
+}
 
 footer {
     @apply flex flex-row justify-between items-center;
+    @apply bg-bg-page border-t border-border-strong shadow-md p-4 py-8;
 }
+
+.footer__socials ul {
+    @apply flex flex-row gap-4;
+}
+
 
 article {
     @apply p-4 flex flex-col justify-between items-start gap-2;
 }
 
 .letter_square {
-    @apply rounded-full w-4 h-4 text-xl;
-    /* ADD COLOR HERE */
+    @apply rounded-full w-4 h-4 text-xl border;
+    
+    @apply border-border-default bg-brand text-text-on-brand;
 }
+
+.logo_container {
+    @apply flex justify-start items-center;
+}
+
+.logo_container span {
+    @apply inline-flex grow-0;
+}
+
+.icon {
+    filter: var(--icon-filter);
+    @apply transition-all duration-300;
+}
+
 
 

@@ -1,18 +1,12 @@
 .card {
-    
+    @apply p-2 rounded-lg;
+    @apply bg-bg-elevated shadow-md;
 }
 
 .card article {
 
 }
-
-.card img {
-
-}
     
-.card__title {
-
-}
 
 
 

@@ -1,48 +1,43 @@
-/* Inter */
+/* Montserrat */
 @font-face {
-  font-family: 'Inter';
-  src: url('../assets/fonts/inter/Inter-Regular.woff2') format('woff2');
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('../assets/fonts/inter/Inter-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../assets/fonts/inter/Inter-Bold.woff2') format('woff2');
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Playfair Display */
 @font-face {
-  font-family: 'Playfair Display';
-  src: url('../assets/fonts/playfair/PlayfairDisplay-Regular.woff2') format('woff2');
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* Fragment Mono */
+@font-face {
+  font-family: 'Fragment Mono';
+  src: url('../assets/fonts/Fragment_Mono/FragmentMono-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: url('../assets/fonts/playfair/PlayfairDisplay-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('../assets/fonts/playfair/PlayfairDisplay-Italic.woff2') format('woff2');
+  font-family: 'Fragment Mono';
+  src: url('../assets/fonts/Fragment_Mono/FragmentMono-Italic.ttf') format('ttf');
   font-weight: 400;
   font-style: italic;
   font-display: swap;

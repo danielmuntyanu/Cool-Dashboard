@@ -1,0 +1,38 @@
+
+.button_outlined {
+    @apply p-2 rounded-lg shadow-md transition-all duration-300;
+}
+.button_outlined:hover {
+    @apply bg-brand-hover text-text-on-brand border-none mb-0;
+    @apply cursor-pointer;
+}
+
+.button_outlined.active {
+    @apply bg-bg-elevated text-text-primary border-none;
+}
+
+.button_outlined.active:hover {
+    @apply bg-brand-hover text-text-on-brand border-none mb-0;
+
+}
+
+
+.button_action {
+    @apply p-2 rounded-lg shadow-md text-center;
+    @apply text-text-on-brand bg-brand hover:bg-brand-hover hover:text-text-on-brand hover:border-none hover:mb-0;
+}
+
+.button_action_secondary {
+    @apply p-2 rounded-lg text-center hover:border hover:-m-px hover:shadow-sm;
+}
+
+.button_icon {
+    @apply bg-bg-elevated p-2 rounded-lg;
+}
+.button_icon:hover {
+    @apply bg-brand transition-all duration-300 border-none cursor-pointer;
+
+    .icon {
+        filter: var(--icon-filter-hover);
+    }
+}

@@ -1,5 +1,5 @@
-import { getItems } from "./src/scripts/api/get-items.js"
-import { applyFilter } from "./src/scripts/components/items-filter.js";
+import { getItems } from "../api/get-items.js"
+import { applyFilter } from "./items-filter.js";
 
 const dashboardFilter = document.getElementById('dashboardFilter');
 
@@ -15,6 +15,7 @@ function renderGallery (itemsRaw) {
     const items = applyFilter(itemsRaw);
     if (items.length === 0) {
         dashboardEmpty.classList.replace("hidden", "flex");
+        dashboardGallery.classList.replace("grid", "hidden");
         return
     } else {
         dashboardEmpty.classList.replace("flex", "hidden");
@@ -42,13 +43,14 @@ function renderList (itemsRaw) {
     const items = applyFilter(itemsRaw);
     if (items.length === 0) {
         dashboardEmpty.classList.replace("hidden", "flex");
+        dashboardList.classList.replace("grid", "hidden");
         return
     } else {
         dashboardEmpty.classList.replace("flex", "hidden");
     }
 
     items.forEach((item) => {
-        dashboardGallery.innerHTML += `
+        dashboardList.innerHTML += `
             <div class="list_item">
                 
                 <h3>
@@ -62,23 +64,43 @@ function renderList (itemsRaw) {
     });
 }
 
-listButton.addEventListener("click", () => {
-    dashboardGallery.classList.add("hidden");
-    dashboardGallery.classList.remove("grid");
-    dashboardGallery.innerHTML = ``
+const galleryButtonListener = async () => {
+    const rawItems = await getItems();
+    if (!rawItems) {
+        return;
+    }
+    
 
-    dashboardList.classList.add("grid");
-    dashboardList.classList.remove("hidden")
-    renderList(getItems());
-});
-
-galleryButton.addEventListener("click", () => {
     dashboardList.classList.remove("grid");
     dashboardList.classList.add("hidden");
     dashboardList.innerHTML = ``
 
     dashboardGallery.classList.remove("hidden");
     dashboardGallery.classList.add("grid")
-    renderGallery(getItems());
 
-});
+    renderGallery(rawItems);
+};
+
+galleryButton.addEventListener("click", galleryButtonListener);
+
+
+const listButtonListener = async () => {
+    const rawItems = await getItems();
+    if (!rawItems) {
+        return;
+    }
+    
+    dashboardGallery.classList.add("hidden");
+    dashboardGallery.classList.remove("grid");
+    dashboardGallery.innerHTML = ``
+
+    dashboardList.classList.add("grid");
+    dashboardList.classList.remove("hidden")
+
+    renderList(rawItems);
+};
+
+listButton.addEventListener("click", listButtonListener);
+
+
+galleryButtonListener();

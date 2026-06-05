@@ -1,8 +1,0 @@
-/* Tailwind tokens (colors, fonts, layout) */
-
-@theme {
-    --color-brand: #6d28d9;
-    --color-surface: #f8f7ff;
-    --font-heading: 'Playfair Display', serif;
-    --radius-card: 12px;
-}

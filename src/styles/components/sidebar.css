@@ -1,17 +1,30 @@
-sidebar {
-    @apply hidden fixed flex-col min-w-[50vw] max-w-[70vw] h-screen min-h-screen;
-    @apply items-center justify-start gap-4 p-4;
+.sidebar {
+    @apply fixed top-0 left-0 z-1000 h-screen min-h-screen flex-col min-w-[50vw] max-w-[70vw];
+    @apply items-start justify-between px-4 pb-8;
     
-    /* BG COLOR HeRE */
+    @apply bg-bg-page border-r border-border-strong shadow-lg;
+
+    @apply md:min-w-[20vw] md:w-[20vw];
 }
 
+
+.sidebar_header {
+    @apply mt-0.5 py-4 h-[10vh] w-full flex flex-row justify-between items-center; 
+}
+
+#closeSidebarButton {
+    @apply opacity-100 md:opacity-0;
+}
+
+
+
 .sidebar__separator {
-    @apply h-0.5 w-full;
-    /* BG COLOR HERE */
+    @apply h-0.5 w-full mb-4;
+    @apply bg-border-strong;
 }
 
 .sidebar__navigation {
-    @apply flex h-full w-full flex-col justify-between items-start px-4 py-8;
+    @apply flex h-full w-full flex-col justify-between items-start;
 }
 
 .sidebar__view_menu {

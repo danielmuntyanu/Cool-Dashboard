@@ -1,0 +1,142 @@
+
+
+/* ─── 2. Палитра — сырые цвета, не меняются ─── */
+/* Эти токены статичны. @theme (без inline) — компилируется в хардкод */
+@theme {
+  /* Neutral dark mode ramp */
+  --color-neutral-blue-50:  #EEF0FF;
+  --color-neutral-blue-100: #DAE2FD;
+  --color-neutral-blue-200: #BEC6E0;
+  --color-neutral-blue-300: #A3ABC4;
+  --color-neutral-blue-400: #8990A8;
+  --color-neutral-blue-500: #6F778E;
+  --color-neutral-blue-600: #565E74;
+  --color-neutral-blue-700: #3F465C;
+  --color-neutral-blue-800: #283044;
+  --color-neutral-blue-900: #131B2E;
+
+    /* Neutral light mode ramp */
+  --color-neutral-gray-50:  #EEF0FF;
+  --color-neutral-gray-100: #DAE2FD;
+  --color-neutral-gray-200: #B7C8E1;
+  --color-neutral-gray-300: #9CACC5;
+  --color-neutral-gray-400: #8292AA;
+  --color-neutral-gray-500: #68788F;
+  --color-neutral-gray-600: #505F76;
+  --color-neutral-gray-700: #38485D;
+  --color-neutral-gray-800: #213145;
+  --color-neutral-gray-900: #0B1C30;
+
+  /* Brand dark mode ramp */
+  --color-brand-blue-50:  #E3F3FF;
+  --color-brand-blue-100: #C4E7FF;
+  --color-brand-blue-200: #7BD0FF;
+  --color-brand-blue-300: #2DB7F2;
+  --color-brand-blue-400: #009BD1;
+  --color-brand-blue-500: #0080AD;
+  --color-brand-blue-600: #00668A;
+  --color-brand-blue-700: #004C69;
+  --color-brand-blue-800: #00354A;
+  --color-brand-blue-900: #001E2C;
+
+  /* Brand light mode ramp */
+  --color-brand-orange-50:  #FFEDE6;
+  --color-brand-orange-100: #FFDBCA;
+  --color-brand-orange-200: #FFB690;
+  --color-brand-orange-300: #FF8D4B;
+  --color-brand-orange-400: #EC6A06;
+  --color-brand-orange-500: #C45600;
+  --color-brand-orange-600: #9D4300;
+  --color-brand-orange-700: #783200;
+  --color-brand-orange-800: #552100;
+  --color-brand-orange-900: #341100;
+
+}
+
+/* ─── 3. Семантические токены — через @theme inline ─── */
+/* inline = Tailwind будет вставлять var() вместо хардкода,
+   поэтому переопределение в .dark сработает автоматически */
+@theme inline {
+  /* Backgrounds */
+  --color-bg-page:      var(--bg-page);
+  --color-bg-surface:   var(--bg-surface);
+  --color-bg-elevated:  var(--bg-elevated);
+  --color-bg-input:     var(--bg-input);
+
+  /* Text */
+  --color-text-primary:   var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted:     var(--text-muted);
+  --color-text-on-brand:  var(--text-on-brand);
+
+  /* Borders */
+  --color-border-default: var(--border-default);
+  --color-border-strong:  var(--border-strong);
+  --color-border-focus:   var(--border-focus);
+
+  /* Brand / interactive */
+  --color-brand:          var(--brand);
+  --color-brand-hover:    var(--brand-hover);
+
+  /* Semantic */
+  --color-success:  var(--success);
+  --color-warning:  var(--warning);
+  --color-danger:   var(--danger);
+  --color-info:     var(--info);
+}
+
+/* ─── 4. Значения токенов: Light mode (default) ─── */
+:root {
+  --bg-page:      var(--color-neutral-gray-200);
+  --bg-surface:   var(--color-neutral-gray-100);
+  --bg-elevated:  white;
+  --bg-input:     var(--color-neutral-gray-100);
+
+  --text-primary:   var(--color-neutral-gray-900);
+  --text-secondary: var(--color-neutral-gray-600);
+  --text-muted:     var(--color-neutral-gray-400);
+  --text-on-brand:  white;
+
+  --border-default: var(--color-neutral-gray-200);
+  --border-strong:  var(--color-neutral-gray-400);
+  --border-focus:   var(--color-brand-orange-600);
+
+  --brand:       var(--color-brand-orange-600);
+  --brand-hover: var(--color-brand-orange-800);
+
+  --success: oklch(55% 0.18 145);
+  --warning: oklch(72% 0.18 70);
+  --danger:  oklch(55% 0.22 25);
+  --info:    oklch(58% 0.18 250);
+
+  --icon-filter: none;
+  --icon-filter-hover: invert(1);
+}
+
+/* ─── 5. Значения токенов: Dark mode ─── */
+.dark {
+  --bg-page:      var(--color-neutral-blue-900);
+  --bg-surface:   var(--color-neutral-blue-800);
+  --bg-elevated:  var(--color-neutral-blue-700);
+  --bg-input:     var(--color-neutral-blue-500);
+
+  --text-primary:   var(--color-neutral-blue-100);
+  --text-secondary: var(--color-neutral-blue-200);
+  --text-muted:     var(--color-neutral-blue-600);
+  --text-on-brand:  var(--color-neutral-blue-800);
+
+  --border-default: var(--color-neutral-blue-400);
+  --border-strong:  var(--color-neutral-blue-600);
+  --border-focus:   var(--color-brand-blue-400);
+
+  --brand:       var(--color-brand-blue-400);   /* светлее в dark! */
+  --brand-hover: var(--color-brand-blue-200);
+
+  --success: oklch(70% 0.18 145);
+  --warning: oklch(80% 0.18 70);
+  --danger:  oklch(70% 0.22 25);
+  --info:    oklch(70% 0.18 250);
+
+  --icon-filter: invert(1);
+  --icon-filter-hover: none;
+}

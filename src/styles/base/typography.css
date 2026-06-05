@@ -1,25 +1,69 @@
 /* base styles for body, h1-h6, p, a */
 
 body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 
+    @apply text-text-secondary;
 }
 
 h1, h2, h3, h4, h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    font-style: normal;
+    font-display: swap;
 
+    @apply text-text-primary;
 }
 
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+h3 {
+    @apply text-lg;
+}
 
 p {
+    font-weight: 300;
 }
 
 a {
-
+    font-weight: 400;
+    text-decoration: none;
+    
+    @apply text-brand;
 }
 
 a:hover {
+    @apply text-brand-hover border-b-2 -mb-0.5 border-brand-hover;
+}
 
+label {
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+    @apply text-text-muted;
 }
 
 .error {
-    color: red;
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    
+    @apply text-danger;
+}
+
+footer a, footer {
+    @apply text-text-primary;
 }

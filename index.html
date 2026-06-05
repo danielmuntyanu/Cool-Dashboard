@@ -9,10 +9,8 @@
 </head>
 <body>
     <header>
-        <div class="header__hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="button_icon" id="headerHamburger">
+            <img class="icon" src="./src/assets/icons/hamburger.svg" />
         </div>
 
         <nav>
@@ -22,8 +20,7 @@
             </ul>
         </nav>
 
-        <div class="header__theme-switch" id="themeSwitch">
-            <img class="icon" src="./src/assets/icons/themeSystem.svg"
+        <div class="header__theme-switch button_icon" id="themeSwitch">
         </div>
 
         <div class="header__theme-menu hidden" id="themeMenu">
@@ -33,19 +30,24 @@
         </div>
     </header>
 
-    <sidebar id="sidebar">
-        <div class="logo_container">
-            <span>
-                CoolDashboard
-                <img class="icon" src="../assets/icons/logo.svg" >
-            </span>
+    <div class="sidebar hidden md:flex">
+        <div class="sidebar_header">
+            <div class="logo_container">
+                <span>
+                    <img class="icon" src="./src/assets/icons/logo.svg" >
+                    CoolDashboard
+                </span>
+            </div>
+            <div class="button_icon" id="closeSidebarButton">
+                <img class="icon" src="./src/assets/icons/back.svg" />
+            </div>
         </div>
 
         <div class="sidebar__separator"></div>
 
         <div class="sidebar__navigation">
             <div class="sidebar__view_menu">
-                <div class="button_outlined" id="galleryButton">
+                <div class="button_outlined active" id="galleryButton">
                     Gallery View
                 </div>
                 <div class="button_outlined" id="listButton">
@@ -53,18 +55,18 @@
                 </div>
             </div>
 
-            <a class="button_outlined" id="logOutButton" href="./src/pages/login.html">
+            <a class="button_outlined active" id="logOutButton" href="./src/pages/login.html">
                 Log Out
             </a>
         </div>
-    </sidebar>
+    </div>
 
     <main>
         <section>
-            <h1 class="text-left">Dashboard</h1>
+            <h1 class="w-full text-left">Employees</h1>
             
             <!-- Filter -->
-            <div class="container" id="dashboardFilter">
+            <div class="filter__container" id="dashboardFilter">
                 
             </div>
 
@@ -93,8 +95,8 @@
     <footer>
         <div class="logo_container">
             <span>
+                <img class="icon" src="./src/assets/icons/logo.svg" >
                 CoolDashboard
-                <img class="icon" src="../assets/icons/logo.svg" >
             </span>
         </div>
 
@@ -108,8 +110,9 @@
     </footer>
 
 
-    <script src="./src/scripts/components/theme-switch.js"></script>
-    <script src="./src/scripts/components/render-dashboard.js"></script>
-    <script src="./src/scripts/components/items-filter.js"></script>
+    <script type="module" src="./src/scripts/components/theme-switch.js"></script>
+    <script type="module" src="./src/scripts/components/render-dashboard.js"></script>
+    <script type="module" src="./src/scripts/components/items-filter.js"></script>
+    <script type="module" src="./src/scripts/components/sidebar.js"></script>
 </body>
 </html>
