@@ -216,6 +216,9 @@
       max-width: 96rem;
     }
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -724,6 +727,11 @@ input {
     --tw-outline-style: none;
     outline-style: none;
   }
+}
+.login__error {
+  padding: calc(var(--spacing) * 2);
+  text-align: center;
+  color: var(--danger);
 }
 .button_outlined {
   border-radius: var(--radius-lg);

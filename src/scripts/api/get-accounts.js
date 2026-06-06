@@ -1,7 +1,7 @@
 export default async function getAccounts () {
     try {
 
-        const response = await fetch("../../database/accounts.json");
+        const response = await fetch("../database/accounts.json");
 
         if (!response.ok) {
             throw new Error("Error: failed to fetch accounts")

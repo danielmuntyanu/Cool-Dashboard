@@ -2,9 +2,9 @@ import checkAuth from "./check-auth.js";
 
 const dashboardButtonListener = () => {
     if (!checkAuth()) {
-        window.location.replace("./login.html");
+        window.location.href = "./login.html";
     } else {
-        window.location.replace("../../index.html");
+        window.location.href = "../../index.html";
     }
 }
 
