@@ -1,4 +1,4 @@
-import { getItems } from "../api/get-items.js"
+import getItems from "../api/get-items.js"
 import { applyFilter } from "./items-filter.js";
 
 const dashboardFilter = document.getElementById('dashboardFilter');
