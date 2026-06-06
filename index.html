@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module" src="./src/scripts/components/check-logged-index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Cool Dashboard</title>
+    <link rel="stylesheet" href="./src/styles/output.css">
+    <script src="./src/scripts/components/theme-default.js"></script>
+</head>
+
+<body>
+    <header class="shift_on_sidebar">
+        <div class="button_icon" id="headerHamburger">
+            <img class="icon" src="./src/assets/icons/hamburger.svg" />
+        </div>
+
+        <nav>
+            <ul class="navigation__list">
+                <li><a class="navigation__link active" href="./index.html">Dashboard</a></li>
+                <li><a class="navigation__link" href="./src/pages/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="header__theme-switch button_icon" id="themeSwitch">
+        </div>
+        
+
+        <div class="header__theme-menu hidden" id="themeMenu">
+            <div class="header__theme-item" id="themeItemDark">Dark mode</div>
+            <div class="header__theme-item" id="themeItemLight">Light Mode</div>
+            <div class="header__theme-item" id="themeItemSystem">System setting</div>
+        </div>
+    </header>
+
+    <div class="sidebar hidden md:flex">
+        <div class="sidebar_header">
+            <div class="logo_container">
+                <span>
+                    <img class="icon" src="./src/assets/icons/logo.svg">
+                    CoolDashboard
+                </span>
+            </div>
+            <div class="button_icon" id="closeSidebarButton">
+                <img class="icon" src="./src/assets/icons/back.svg" />
+            </div>
+        </div>
+
+        <div class="sidebar__separator"></div>
+
+        <div class="sidebar__navigation">
+            <div class="sidebar__view_menu">
+                <div class="button_outlined active" id="galleryButton">
+                    Gallery View
+                </div>
+                <div class="button_outlined" id="listButton">
+                    List View
+                </div>
+            </div>
+
+            <div class="button_outlined active" id="logOutButton">
+                Log Out
+            </div>
+        </div>
+    </div>
+
+    <main class="shift_on_sidebar">
+        <section>
+            <h1 class="w-full text-left">Employees</h1>
+
+            <!-- Filter -->
+            <div class="filter__container" id="dashboardFilter">
+
+            </div>
+
+            <!-- Gallery -->
+            <div class="container gallery_container" id="dashboardGallery">
+
+            </div>
+
+            <!-- List -->
+            <div class="container list_container hidden" id="dashboardList">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Adress</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dashboardListBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Empty -->
+            <div class="container hidden justify-center items-center text-center" id="dashboardEmpty">
+                <h2>No items found.</h2>
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="shift_on_sidebar_footer">
+        <div class="logo_container">
+            <span>
+                <img class="icon" src="./src/assets/icons/logo.svg">
+                CoolDashboard
+            </span>
+        </div>
+
+        <div class="footer__socials">
+            <ul>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script type="module" src="./src/scripts/components/theme-switch.js"></script>
+    <script type="module" src="./src/scripts/components/render-dashboard.js"></script>
+    <script type="module" src="./src/scripts/components/items-filter.js"></script>
+    <script type="module" src="./src/scripts/components/sidebar.js"></script>
+    <script type="module" src="./src/scripts/components/log-out.js"></script>
+</body>
+
+</html>

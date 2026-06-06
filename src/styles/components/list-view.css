@@ -1,0 +1,28 @@
+
+.list_container {
+
+}
+
+table {
+    @apply w-full text-xs md:text-base;
+}
+
+thead {
+    @apply bg-bg-page text-left;
+}
+
+tbody {
+    @apply bg-bg-elevated;
+}
+
+tr {
+    @apply border-y border-border-strong;
+}
+
+th, td {
+    @apply p-1 md:px-4 md:py-2 border-x border-border-strong;
+}
+
+.list_item {
+
+}

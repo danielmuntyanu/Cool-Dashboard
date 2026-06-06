@@ -1,0 +1,154 @@
+body {
+    @apply bg-bg-page;
+}
+
+section {
+    @apply min-h-[90vh] p-4 w-full flex flex-col justify-start items-center gap-8 my-8;
+}
+
+.container {
+    @apply p-4 sm:p-8 bg-bg-surface rounded-lg shadow-md; 
+}
+
+header {
+    @apply 
+        sticky top-0 z-50 h-[10vh] 
+        flex  flex-row justify-between items-center p-4
+        bg-bg-page border-b border-border-strong shadow-md;
+}
+
+
+
+#headerHamburger {
+    @apply opacity-100 md:opacity-0;
+}
+
+
+.navigation__list {
+    @apply flex flex-row gap-2 justify-around items-center;
+}
+
+.navigation__link {
+    @apply hover:border-none;
+}
+.navigation__link.active {
+    @apply border-b-2 border-brand;
+}
+
+.shift_on_sidebar {
+    @apply md:pl-[20vw];
+}
+
+.shift_on_sidebar_footer {
+    @apply md:pl-[calc(20vw+1rem)];
+}
+
+footer {
+    @apply 
+        flex flex-row justify-between items-center
+        bg-bg-page border-t border-border-strong shadow-md p-4 py-8;
+}
+
+.footer__socials ul {
+    @apply flex flex-row gap-4;
+}
+
+.logo_container {
+    @apply flex justify-start items-center;
+}
+
+.logo_container span {
+    @apply inline-flex grow-0 text-text-primary;
+}
+
+.icon {
+    filter: var(--icon-filter);
+    @apply transition-all duration-300;
+}
+
+article {
+    @apply p-4 flex flex-col justify-between items-start gap-2;
+}
+
+/* === Discover Page === */
+
+.hero__container {
+    @apply 
+        flex flex-col justify-between items-center gap-4 mb-8
+        md:flex-row md:justify-around md:items-start;
+}
+
+.hero__image {
+    @apply
+        /* Mobile: */
+        fixed inset-0 w-full h-full
+        object-cover opacity-100 -z-10
+        /* Desktop: */
+        md:static md:w-auto md:h-auto 
+        md:rounded-lg md:shadow-md
+        md:object-none md:opacity-100 md:z-auto;
+}
+
+.hero__image__darker {
+    @apply 
+        md:hidden bg-black fixed inset-0 w-full h-full
+        opacity-30 -z-5
+}
+
+.hero__buttons {
+    @apply 
+        flex flex-col sm:flex-row gap-4 
+        justify-around md:justify-start 
+        items-center ml-4 md:ml-0 mt-8;
+}
+
+.about__container {
+    @apply w-full flex flex-row flex-wrap justify-center items-center gap-6 md:gap-4;
+}
+
+.about__title {
+    @apply text-center text-white md:text-text-primary;
+}
+
+
+.about__card {
+    @apply 
+        min-h-[40vh] min-w-50 max-w-55 md:min-w-65 md:max-w-75 rounded-lg
+        bg-bg-elevated shadow-md
+        p-4 md:p-8 flex flex-col justify-around items-center gap-4;
+}
+
+
+
+
+/* === Login Page === */
+
+.login__section {
+    @apply min-h-[90vh] p-4 w-full flex flex-col justify-center items-center gap-8;
+}
+
+.login__title {
+    @apply 
+        /* mt-8 */
+        text-center;
+}
+
+.login__container {
+    @apply flex flex-col justify-center items-center w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[30vw];
+}
+
+.login__form {
+    @apply w-full flex flex-col justify-around items-start gap-4 mb-4 ;
+}
+
+input {
+    @apply 
+        border-2 border-border-strong rounded-lg p-4 w-full
+        focus:border-border-focus bg-bg-input
+        focus:ring-2 focus:ring-border-focus/30
+        focus:outline-none ;
+}
+
+.login__error {
+    @apply text-danger p-2 text-center;
+}

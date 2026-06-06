@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Cool Dashboard</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <script src="../scripts/components/theme-default.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo_container md:flex-1">
+            <span>
+                <img class="icon" src="../assets/icons/logo.svg" >
+                CoolDashboard
+            </span>
+        </div>
+
+        <nav>
+            <ul class="navigation__list">
+                <li><a class="navigation__link active" href="./discover.html">Discover</a></li>
+                <li><a class="navigation__link" href="./login.html">Sign In</a></li>
+            </ul>
+        </nav>
+
+        <div class="md:flex-1 md:w-full md:flex md:justify-end">
+            <div class="header__theme-switch button_icon" id="themeSwitch">
+            </div>
+        </div>
+
+        <div class="header__theme-menu hidden" id="themeMenu">
+            <div class="header__theme-item" id="themeItemDark">Dark mode</div>
+            <div class="header__theme-item" id="themeItemLight">Light Mode</div>
+            <div class="header__theme-item" id="themeItemSystem">System setting</div>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <div class="container hero__container">
+                <article>
+                    <h1>Empower Your Workflow</h1>
+                    <p>Unlock advanced analytical tools and streamlined system management in one unified interface.</p>
+                    <div class="hero__buttons">
+                        <div class="button_action" id="dashboardButton">
+                            Go To Dashboard
+                        </div>
+                        
+                        <a class="button_action_secondary" href="https://github.com/danielmuntyanu/Cool-Dashboard" target="_blank">
+                            <div >
+                                View on GitHub
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <div>
+                    <img class="hero__image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjX7QWtkxxKU5gmnQF2OZV8nJ1X933IW4XCQy125h9ZGsGwjyklJ4qr7b8m58753m8NXjPkOnD6uwXZkqmYF2fOKq0EgSME7Xtq8cKvsSRucg3kixTcl3gCowO7o1Io_bbE838kWO2cAcSiV7foTyuPhaOTt9ff8xABpHD88lMOMTt4cHmWIuuLk3SWYkkJONTWbkLQ6-Um4lunGAGKqAESpc_BfSxC-8COJ4r212LWh8UQbRjs1OYkm3LwDASQ27DeSec5SLk1yM" alt="Cool Dashboard image">
+                    <div class="hero__image__darker"></div>
+                </div>
+
+            </div>
+        
+            <h1 class="about__title">Discover Cool Dashboard</h1>
+            <h2 class="about__title">This is a cool dashboard for you to explore.</h2>
+
+            <div class="container about__container">
+                <div class="about__card">
+                    <img class="icon" src="../assets/icons/discover-1.svg" />
+                    <h3>Unmatched Speed</h3>
+                    <p>Experience zero-latency interactions with our optimized real-time data streaming engine. Information at the speed of thought.</p>
+                </div>
+                <div class="about__card">
+                    <img class="icon" src="../assets/icons/discover-2.svg" />
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-grade encryption and multi-layered authentication protocols ensure your organizational data stays private and protected.</p>
+                </div>
+                <div class="about__card">
+                    <img class="icon" src="../assets/icons/discover-3.svg" />
+                    <h3>Deep Integration</h3>
+                    <p>Connect seamlessly with your existing stack. Over 500+ pre-built connectors for the tools your team already uses every day.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo_container">
+            <span>
+                <img class="icon" src="../assets/icons/logo.svg" >
+                CoolDashboard
+            </span>
+        </div>
+
+        <div class="footer__socials">
+            <ul>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/components/theme-switch.js"></script>
+    <script type="module" src="../scripts/components/check-logged-discover.js"></script>
+</body>
+</html>

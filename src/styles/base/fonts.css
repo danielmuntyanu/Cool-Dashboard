@@ -1,0 +1,44 @@
+/* Montserrat */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* Fragment Mono */
+@font-face {
+  font-family: 'Fragment Mono';
+  src: url('../assets/fonts/Fragment_Mono/FragmentMono-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fragment Mono';
+  src: url('../assets/fonts/Fragment_Mono/FragmentMono-Italic.ttf') format('ttf');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,15 @@
+/* comon CSS variables (not Taiwind ones)
+
+Это вещи типа высоты хедера, z-index слоёв, 
+длительностей анимаций — то, что ты пишешь 
+руками в CSS, но хочешь держать централизованно.
+
+*/
+
+/* :root {
+    --header-height: 64px;
+    --sidebar-width: 280px;
+    --transition-default: 200ms ease;
+    --z-modal: 1000;
+    --z-tooltip: 1100;
+} */
