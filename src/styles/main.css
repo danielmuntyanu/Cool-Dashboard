@@ -16,6 +16,7 @@
 @import "./components/sidebar.css";
 @import "./components/theme-menu.css";
 @import "./components/filter-container.css";
+@import "./components/atmospheric.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

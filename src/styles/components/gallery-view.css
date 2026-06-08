@@ -13,14 +13,22 @@
 }
 
 .card article {
-    @apply p-2 ;
+    @apply p-0 py-2 ;
+}
+
+.address__card {
+    @apply rounded-lg bg-bg-surface p-2 border-2 border-brand;
 }
     
 
 .letter_square {
-    @apply rounded-full w-12 h-12 text-xl border flex justify-center items-center;
+    @apply rounded-full w-16 h-16 text-xl border flex justify-center items-center;
     
     @apply border-border-default bg-brand text-text-on-brand;
+}
+
+.gallery__button {
+    @apply ml-2 hover:border-none hover:mb-0;
 }
 
 

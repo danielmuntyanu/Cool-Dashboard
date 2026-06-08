@@ -1,37 +1,14 @@
 # Cool Dashboard
 
 ## About
-Cool Dashboard is a web application that allows you to manage your employee with comfort and ease.
+Cool Dashboard is a web application that allows you to manage your employee with comfort and ease. <br>
+<span style="color: #9500ff;">**New Feature in v1.1.0: Dark and Light theme switch**</span>
 
-### Stack:
-- HTML5, CSS3, JavaScript
-- Node.JS
-- TailwindCSS
-- Vitest
-
-### Metodologies:
-Planning:
-- SCRUM (User Stories and AC)
-- Creating mockups first with Google Stitch and Figma
-
-Design:
-- BEM
-- Light and Dark themes
-
-Development:
-- Test Driven Development (TDD)
-  
-  
-
-
-# Prototype 
-Google Stitch prototype - [link](https://stitch.withgoogle.com/projects/3344445635291381937)
-
-
-# Userflow 
-![User Flow](./src/assets/mockups/user-flow.png)
-
-
+![Website Preview](./src/assets/mockups/preview-1.png)
+![Website Preview](./src/assets/mockups/preview-2.png)
+![Website Preview](./src/assets/mockups/preview-3.png)
+![Website Preview](./src/assets/mockups/preview-4.png)
+![Website Preview](./src/assets/mockups/preview-5.png)
 
 # Installation 
 
@@ -58,6 +35,38 @@ To start the project:
 `npm start`
 
 
+### Stack:
+- HTML5, CSS3, JavaScript
+- Node.JS
+- TailwindCSS
+- Vitest
+- Playwright
+
+### Metodologies:
+Planning:
+- SCRUM (User Stories and AC)
+- Creating mockups first with Google Stitch and Figma
+
+Design:
+- BEM
+- Mobile First
+- Light and Dark themes
+
+Development:
+- Test Driven Development (TDD)
+  
+
+# Prototype 
+Google Stitch prototypes - [link](https://stitch.withgoogle.com/projects/3344445635291381937)
+
+![Prototype sceenshot 1](/src//assets/mockups/prototype-1.png)
+![Prototype sceenshot 2](/src//assets/mockups/prototype-2.png)
+
+
+# Userflow 
+![User Flow](./src/assets/mockups/user-flow.png)
+
+
 
 # Planning with Jira
 ![Planning with Jira](./src/assets/mockups/jira-planning.png)
@@ -76,6 +85,8 @@ To start the project:
 > **Given** the user is on “/“ page / **When** user is not already logged  / **Then** they will be redirected to “/discover“ page with (Sign In) button .
 
 > **Given** the user is on “/discover“ page / **When** they press (Sign In) button / **Then** they will go to “/login“  page.
+
+> **Given** the user is on “/discover“ page / **When** they press (Go To Dashboard) button / **Then** they will go to “/login“  page if not logged in or to dashboard page "/" if logged in.
 
 > **Given** the user is on “/login“ page / **When** they entry correct username and password and press (Sign In) button / **Then** they will be redirected to Dashboard at “/“ page.  
 
@@ -110,6 +121,16 @@ To start the project:
 > **Given** the authenticated user is at Dashboard page  / **When** they press (Log Out) button  / **Then** they immediately will be redirected to login page and the session will be closed.
 
 > **Given** the authenticated user will never hit the (Log Out) button / **When** they use the same browser / **Then** their session won’t be closed ever.
+
+
+# Unit Testing (Vitest)
+
+![Vitest Unit Tests passed screenshot 1](./src/assets/mockups/unit-test-1.png)
+![Vitest Unit Tests passed screenshot 2](./src/assets/mockups/unit-test-2.png)
+
+# End-2-End Testing (Playwright)
+![Playwright End-2-End Tests passed screenshot 2](./src/assets/mockups/e2e-test.png)
+
 
 # Authors
 **Danyil Muntianu** 

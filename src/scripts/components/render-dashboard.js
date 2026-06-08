@@ -7,6 +7,7 @@ const dashboardGallery = document.getElementById('dashboardGallery');
 const dashboardList = document.getElementById('dashboardList');
 const dashboardListBody = document.getElementById('dashboardListBody');
 const dashboardEmpty = document.getElementById('dashboardEmpty');
+const dashboardError = document.getElementById('dashboardError');
 
 const galleryButton = document.getElementById('galleryButton');
 const listButton = document.getElementById('listButton');
@@ -41,16 +42,17 @@ function renderGallery (itemsRaw) {
                     </p>
                     <p>
                         <b>Address:</b> <br/>
-                        &nbsp;&nbsp;<b>Street</b>: ${item.address.street}, <br/>
-                        &nbsp;&nbsp;<b>Suite</b>: ${item.address.suite}, <br/>
-                        &nbsp;&nbsp;<b>City</b>: ${item.address.city}, <br/> 
-                        &nbsp;&nbsp;<b>Zipcode</b>: ${item.address.zipcode}
-                    
+                        <div class="address__card">
+                            <b>Street</b>: ${item.address.street}, <br/>
+                            <b>Suite</b>: ${item.address.suite}, <br/>
+                            <b>City</b>: ${item.address.city}, <br/> 
+                            <b>Zipcode</b>: ${item.address.zipcode}
+                        </div>
                     </p>
 
                 </article>
 
-                <a href="mailto:${item.email}">
+                <a class="gallery__button" href="mailto:${item.email}">
                     <div class="button_action">Send Email</div>
                 </a>
 
@@ -89,7 +91,10 @@ function renderList (itemsRaw) {
 const galleryButtonListener = async () => {
     const rawItems = await getItems();
     if (!rawItems) {
+        dashboardError.classList.replace("hidden", "flex");
         return;
+    } else {
+        dashboardError.classList.replace("flex", "hidden");
     }
 
     localStorage.setItem("view", "gallery")
@@ -114,7 +119,10 @@ galleryButton.addEventListener("click", galleryButtonListener);
 const listButtonListener = async () => {
     const rawItems = await getItems();
     if (!rawItems) {
+        dashboardError.classList.replace("hidden", "flex");
         return;
+    } else {
+        dashboardError.classList.replace("flex", "hidden");
     }
 
     localStorage.setItem("view", "list")

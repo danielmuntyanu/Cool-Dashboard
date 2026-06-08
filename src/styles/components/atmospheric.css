@@ -1,0 +1,27 @@
+
+.login-glass {
+    background: rgba(19, 27, 46, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(123, 208, 255, 0.1);
+}
+        
+.header-glass {
+    background: rgba(11, 28, 48, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(123, 208, 255, 0.1);
+}
+
+
+.atmos__container {
+    @apply fixed inset-0 pointer-events-none z-0;
+}
+
+.atmos__top {
+    @apply absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-atmos-top/10 rounded-full blur-[120px];
+} 
+
+.atmos__bottom {
+    @apply absolute bottom-[-10%] right-[-5%] w-[50%] h-[50%] bg-atmos-bottom/20 rounded-full blur-[150px];
+} 
+
+
